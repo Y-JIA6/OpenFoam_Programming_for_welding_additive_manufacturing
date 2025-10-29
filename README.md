@@ -11,6 +11,6 @@ Compared to solver 1, the new solver use k/Cp/rho instead of DT
 
 Solver 3: solidLaserFoam
 
-adding a surfical gaussian heat source to simulate laser heating effect.
+Add a surfical gaussian heat source to simulate laser heating effect.
 
 To be continued.....
