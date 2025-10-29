@@ -6,9 +6,11 @@ Let's begin learning how to programme with OpenFoam V10 for welding and additive
 Solver 1: official laplacianFoam
 
 Solver 2: myLaplacianFoam
+
 Compared to solver 1, the new solver use k/Cp/rho instead of DT
 
 Solver 3: solidLaserFoam
+
 adding a surfical gaussian heat source to simulate laser heating effect.
 
 To be continued.....
