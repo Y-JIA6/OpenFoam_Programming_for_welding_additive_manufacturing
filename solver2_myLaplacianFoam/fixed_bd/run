@@ -1,0 +1,4 @@
+foamCleanCase
+cp -r initial 0
+blockMesh
+myLaplacianFoam
