@@ -71,7 +71,7 @@ volScalarField Q
         "Q",
         runTime.timeName(),
         mesh,
-        IOobject::MUST_READ_IF_MODIFIED,   // ⚠️ Usually set to NO_READ if Q is generated internally
+        IOobject::NO_READ ,   // ⚠️ Usually set to NO_READ if Q is generated internally
         IOobject::AUTO_WRITE
     ),
     mesh,
@@ -89,7 +89,7 @@ IOdictionary laserProperties
         "laserProperties",       // File name: constant/laserProperties
         runTime.constant(),      // Located in constant/
         mesh,
-        IOobject::MUST_READ,     // Must exist
+        IOobject::MUST_READ_IF_MODIFIED,     // Must exist
         IOobject::NO_WRITE
     )
 );
