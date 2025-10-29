@@ -1,2 +1,5 @@
 # OpenFoam_Programming_for_welding_additive_manufacturing
 OpenFoam_Programming_learning_for_welding_additive_manufacturing
+
+Let's begin learning how to programme with OpenFoam V10 for welding and additive manufacutring
+Solver 1: official laplacianFoam
