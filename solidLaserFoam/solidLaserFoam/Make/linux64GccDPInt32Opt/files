@@ -1,3 +1,0 @@
-SOURCE += solidLaserFoam.C
-
-EXE = $(FOAM_APPBIN)/solidLaserFoam
