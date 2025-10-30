@@ -1,0 +1,50 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |
+| \\      /  F ield         | convectiveRadiativeLinear test
+|  \\    /   O peration     |
+|   \\  /    A nd           |
+|    \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      T;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 1 0 0 0];
+
+internalField   uniform 300;
+
+boundaryField
+{
+    leftWall
+    {
+        type fixedGradient;
+        gradient uniform -500.0;
+	}
+
+
+    rightWall
+    {
+        type fixedGradient;
+        gradient uniform -500.0;
+	}
+
+    topWall
+    {
+        type fixedGradient;
+        gradient uniform -500.0;
+	}
+
+    otherWalls
+    {
+        type fixedGradient;
+        gradient uniform -500.0;
+	}
+}
+
+// ************************************************************************* //
