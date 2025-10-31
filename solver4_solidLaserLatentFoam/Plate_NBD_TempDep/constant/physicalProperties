@@ -1,0 +1,45 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.1.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      physicalProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// Thermal conductivity [W/m/K]
+kTable
+(
+    (300   15)
+    (400   20)
+    (600   30)
+    (800   50)
+    (1000  50)
+);
+
+// Specific heat capacity [J/kg/K]
+CpTable
+(
+    (300   400)
+    (600   450)
+    (900   500)
+    (1200  510)
+);
+
+// Density [kg/m3]
+rhoTable
+(
+    (300   7850)
+    (1200  7750)
+);
+
+// Behavior outside the range: clamp or linear
+outOfRange clamp;
