@@ -1,0 +1,49 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM Foundation: Laser heat source setup    |
+|  \\    /   O peration     | Version: 10                                     |
+|   \\  /    A nd           | Author: yabo & GPT-5                            |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      laserProperties;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// Laser total power [W]
+P           500;
+
+// Beam radius [m]
+r0          0.2;
+
+// Material absorption coefficient [dimensionless, 0–1]
+absorption  0.4;
+
+// Laser starting position [m]
+// Example: initial beam position in Cartesian coordinates
+laserOrigin (0.5 0 0.1);
+
+// Laser scanning velocity vector [m/s]
+// Example: move along the Y-direction at 0.1 m/s (100 mm/s)
+vLaser      (0.0 0.1 0.0);
+
+// Laser activation time window [s]
+startTime   0.0;      // Laser ON at 0 s
+endTime     10;       // Laser OFF at 10 s
+
+// Target boundary patch where the laser is applied
+patchName   topWall;
+
+// Optional: penetration depth of the laser [m]
+// Used to distribute surface energy into volumetric source Q = q/delta
+delta       0.001;
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
